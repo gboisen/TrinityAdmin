@@ -1248,15 +1248,15 @@ function MangAdmin:AddItem(value, state)
            amt=amt*-1
            amount=tostring(amt)
         end
-        self:ChatMsg(".additem "..value.." "..amount)
+        self:ChatMsg(".additem "..value.." "..amount..")
         self:LogAction("Removed "..amount.." items with id "..value.." to "..player..".")
       end
     else
       if amount == "" then
-        self:ChatMsg(".additem "..value)
+        self:ChatMsg(".additem "..value..")
         self:LogAction("Added item with id "..value.." to "..player..".")
       else
-        self:ChatMsg(".additem "..value.." "..amount)
+        self:ChatMsg(".additem "..value.." "..amount..")
         self:LogAction("Added "..amount.." items with id "..value.." to "..player..".")
       end
     end
